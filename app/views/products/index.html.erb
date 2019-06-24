@@ -19,13 +19,12 @@ $(function() {
         }
         var descriptionText = "<p>Description: " + data["description"] + "</p><p>Availability: " + inventoryText + "</p>";
         $("#product-" + id).html(descriptionText);
-      });
-      var orders = data["orders"]
-       var ordersList = "";
-       orders.forEach(function(order) {
-         ordersList += '<li class="js-order" data-id="' + order["id"] + '">' + order["id"] + ' - ' + order["created_at"] + '</li>';
-       });
-       $("#product-" + id + "-orders").html(ordersList);
+        var orders = data["orders"]
+        var ordersList = "";
+        orders.forEach(function(order) {
+          ordersList += '<li class="js-order" data-id="' + order["id"] + '">' + order["id"] + ' - ' + order["created_at"] + '</li>';
+        });
+        $("#product-" + id + "-orders").html(ordersList);
     });
   });
 });
