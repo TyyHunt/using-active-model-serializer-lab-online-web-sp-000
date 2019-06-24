@@ -17,7 +17,7 @@ $(function() {
         {
           inventoryText = "<strong>Available</strong>";
         }
-        var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
+        var descriptionText = "<p>Description: " + data["description"] + "</p><p>Availability: " + inventoryText + "</p>";
         $("#product-" + id).html(descriptionText);
       });
     });
